@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="2023_29_07" author="MikhailMyakishev">
+        <createTable tableName="student">
+            <column name="id" type="bigint">
+                <constraints primaryKey="true" primaryKeyName="student_id_pk" />
+            </column>
+            <column name="number_in_list" type="integer"/>
+            <column name="snils" type="varchar"/>
+            <column name="test_points" type="integer"/>
+            <column name="additional_points" type="integer"/>
+            <column name="sum_points" type="integer"/>
+        </createTable>
+        <addAutoIncrement tableName="student" columnName="id" columnDataType="bigint" startWith="1" incrementBy="1" />
+    </changeSet>
+</databaseChangeLog>
